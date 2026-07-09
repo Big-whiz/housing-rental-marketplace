@@ -1,4 +1,13 @@
+// Tailwind CSS configuration for Vite
+
 import { defineConfig } from 'vite';
+import tailwindcss from 'tailwindcss';
+
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+});
 import laravel from 'laravel-vite-plugin';
 import { bunny } from 'laravel-vite-plugin/fonts';
 import tailwindcss from '@tailwindcss/vite';
