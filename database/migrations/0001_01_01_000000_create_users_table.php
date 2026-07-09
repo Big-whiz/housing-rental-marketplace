@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('phone')->nullable(); // Contact phone number for SMS/OTP
+            $table->string('role')->default('tenant'); // 'tenant', 'landlord', or 'admin'
+            $table->boolean('is_verified')->default(false); // Verification status of user
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
