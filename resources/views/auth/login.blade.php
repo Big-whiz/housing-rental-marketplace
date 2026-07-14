@@ -69,18 +69,7 @@
                 </button>
             </form>
 
-            <!-- Quick Demo Switches for Supervisor review -->
-            <div class="pt-6 border-t border-gray-150">
-                <span class="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-3 text-center">Quick Login (Supervisor Mode)</span>
-                <div class="grid grid-cols-2 gap-2 text-xs">
-                    <button onclick="fillAndSubmit('tenant@example.com')" class="py-2 px-2 bg-gray-100 hover:bg-blue-50 text-gray-700 hover:text-blue-600 rounded-lg border border-gray-200 transition font-semibold">
-                        🔑 Tenant (Ama)
-                    </button>
-                    <button onclick="fillAndSubmit('landlord@example.com')" class="py-2 px-2 bg-gray-100 hover:bg-blue-50 text-gray-700 hover:text-blue-600 rounded-lg border border-gray-200 transition font-semibold">
-                        🔑 Landlord (Kofi)
-                    </button>
-                </div>
-            </div>
+
 
             <div class="text-center text-xs text-gray-500">
                 Don't have an account? <a href="{{ route('register') }}" class="font-bold text-blue-600 hover:underline">Register here</a>
@@ -113,11 +102,6 @@
             document.getElementById('btn-submit-otp').classList.remove('hidden');
         }
 
-        function fillAndSubmit(email) {
-            var form = document.getElementById('password-tab');
-            form.querySelector('input[type="email"]').value = email;
-            form.querySelector('input[type="password"]').value = 'password'; // Seeded password is 'password' by default
-            form.submit();
-        }
+
     </script>
 </x-layout>
