@@ -29,3 +29,4 @@ docs/credentials.txt
 housing-rental-key.pem
 aws/
 awscliv2.zip
+.env.vercel
